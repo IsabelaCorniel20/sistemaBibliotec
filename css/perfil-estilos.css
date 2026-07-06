@@ -1,0 +1,215 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f3f4f6;
+}
+
+.contenedor{
+display:flex;
+height:100vh;
+}
+
+/* MENU */
+
+.menu{
+
+width:230px;
+background:#0b3257;
+color:white;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.menu button{
+
+width:100%;
+margin:8px 0;
+padding:10px;
+border:none;
+background:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+.menu button:hover{
+background:#ddd;
+}
+
+.filosofo{
+    margin-top:auto; 
+    text-align:center;
+    font-size:13px;
+    padding-top:20px;
+}
+
+.filosofo img{
+width:120px;
+}
+
+/* CONTENIDO */
+
+.contenido{
+flex:1;
+padding:20px;
+}
+
+/* HEADER */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:15px;
+border-radius:10px;
+margin-bottom:20px;
+
+}
+
+.usuario{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+/* PERFIL */
+
+.perfil{
+
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+
+}
+
+.titulo{
+
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+
+}
+
+.editar{
+padding:10px 20px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+
+}
+
+.datos{
+display:flex;
+gap:40px;
+
+}
+
+.foto{
+text-align:center;
+
+}
+
+.foto img{
+
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+
+}
+
+.foto button{
+padding:8px 15px;
+text-align: left;
+
+}
+
+.info table{
+border-radius:10px;
+
+
+}
+
+.info td:first-child{
+padding: 5px;
+margin-top: 30px;
+
+}
+
+/* SEGURIDAD */
+
+.seguridad{
+
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+
+}
+
+.fila{
+
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+
+}
+
+.fila button{
+
+padding:10px 20px;
+
+}
+
+/* TABLA */
+
+.actividad{
+
+background:white;
+padding:20px;
+border-radius:10px;
+
+}
+
+.actividad table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+
+}
+
+.actividad th{
+
+background:#0b3257;
+color:white;
+padding:12px;
+
+}
+
+.actividad td{
+
+padding:12px;
+border-bottom:1px solid #ddd;
+
+}
+
+.actividad tr:hover{
+
+background:#f2f2f2;
+
+}
