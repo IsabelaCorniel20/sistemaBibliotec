@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Socrates-inicio</title>
+    <link rel="icon" href="img/Socrates logo.png">
+    <link rel="stylesheet" href="img/Socrates logo.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <div id="panelLateral">
+        <aside>
+            <div id="logo">
+                <img src="img/Socrates logo.png" alt="logo" title="Logo">
+                <h2>Socrates <br> Biblioteca</h2>
+            </div>
+
+            <nav id="enlacesLateral">
+                <ul>
+                    <li> <a href="index.html" class="activo">DASHBOARD</a></li>
+                    <li> <a href="inventario.html">INVENTARIO</a></li>
+                    <li> <a href="prestamos.html">PRESTAMOS</a></li>
+                    <li> <a href="clientes.html">CLIENTES</a></li>
+                    <li> <a href="historial.html">HISTORIAL</a></li>
+                    <li> <a href="perfil.html">CONFIGURACIÓN</a></li>
+                </ul>
+
+                <img src="img/foto-nav.png" alt="Frase de Socrates" id="Socrates">
+            </nav>
+        </aside>
+    </div>
+
+    <header>
+        <div class="saludo">
+            <h1>Bienvenido, Administrador</h1>
+            <h3>Gestiona el inventario y préstamos de una biblioteca.</h3>
+        </div>
+
+        <div class="perfil">
+            <i class="fa-solid fa-bell" class="icono"></i>
+            <div class="perfilUsuario">
+                <a href="perfil.html">
+                    <img src="img/avatar.png" alt="" class="icono"> <!--Icono de usuario-->
+                </a>
+                <p>Administrador</p>
+                <i class="fa-solid fa-angle-down" class="icono"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido -->
+    <div id="contenedor">
+        <div class="Info_superio">
+            <div class="cuadros">
+            <!-- Hay que ponerle etiqueta id para hacer cambios a toda las secciones de aquí que javascript envié la información-->
+            <h3>254</h3>
+            <p>Total de Libros</p>
+            </div>
+
+            <div class="cuadros">
+                <h3>132</h3>
+                <p>Disponibles</p>
+            </div>
+
+            <div class="cuadros">
+                <h3>122</h3>
+                <p>Prestados</p>
+            </div>
+        
+        </div>
+        <div id="inventarioInicial">
+            <!-- titulo -->
+            <h4 class="titulo">Inventario de libros</h4>
+            <!-- Búsqueda -->
+            <input type="search" placeholder="Búsqueda">
+            <!-- categorías -->
+            <div class="categoria">
+                <select name="Categoria" id="categoria">
+                    <option value="">- Categoría -</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Comedia">Comedia</option>
+                </select>
+            </div>
+            <!-- estados -->
+            <div class="Estado">
+                <select name="Estado" id="estado">
+                    <option value="">- Estado -</option>
+                    <option value="Atrasado">Atrasado</option>
+                    <option value="Disponible">Disponible</option>
+                    <option value="Prestado">prestado</option>
+                    <option value="Perdido">Perdido</option>
+                    <option value="Dañado">Dañado</option>
+                </select>
+            </div>
+            <!-- botón agregar -->
+            <div class="agregar">
+                <a href="Agregar_libro.html">
+                    <button>Agregar Libros</button>
+                </a>
+            </div>
+
+            <!-- Tabla de Inventario -->
+            <div class="inventarioTabla">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Portada</th>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Categoría</th>
+                            <th>Estado</th>
+                            <th>Disponibilidad</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="informacionLibro.html"><figure><img src="img/aDosMetrosDeTi.jpg" alt="portada"></figure></a>
+                            </td>
+                            <td>A dos metros de ti</td>
+                            <td>Ariana Godoy</td>
+                            <td>Romance/Ficción</td>
+                            <td class="disponible">Disponible</td>
+                            <td>3/5</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <figure><img src="img/hamlet.webp" alt="portada"></figure>
+                            </td>
+                            <td>Hamlet</td>
+                            <td>William Shakespeare</td>
+                            <td>Tragedia/Romance</td>
+                            <td class="prestado">Prestado</td>
+                            <td>0/2</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="6" class="verMas"><a href="inventario.html">Ver mas <i class="fa-solid fa-chevron-down"></i></a></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tabla de prestamos -->
+        <div id="prestamosInicial">
+            <!-- titulo -->
+            <h4 class="titulo">Libros en prestamos</h4>
+            <!-- búsqueda -->
+            <input type="search" placeholder="Búsqueda">
+
+            <div class="prestamoTabla">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Libro</th>
+                            <th>Cliente</th>
+                            <th>Fecha de entrega</th>
+                            <th>Fecha de devolución</th>
+                            <th>Estado del libro</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <figure><img src="img/coraline.jpeg" alt="portada">
+                                    <figcaption>Coraline (Neil Gaiman)</figcaption>
+                                </figure>
+                            </td>
+                            <td>C-0012 Juana Lopez</td>
+                            <td>11/04/2026</td>
+                            <td>27/04/2026</td>
+                            <td class="atrasado">Atrasado</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <figure><img src="img/blancaNieves.jpg" alt="portada">
+                                    <figcaption>Blanca Nieves (Los Grim)</figcaption>
+                                </figure>
+                            </td>
+                            <td>C-0015 Carlos Juan</td>
+                            <td>30/05/2026</td>
+                            <td>29/06/2026</td>
+                            <td class="proximo a vencer">Proximo a vencer</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="5" class="verMas"><a href="prestamos.html">Ver mas <i class="fa-solid fa-chevron-down"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

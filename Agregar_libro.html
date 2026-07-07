@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Libro</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  
+</head>
+<body>
+  <div class="layout">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/socratesh.jpg" alt="Logo Sócrates">
+        <h2>SÓCRATES BIBLIOTECA</h2>
+      </div>
+
+      <!-- Navegación -->
+      <nav class="nav">
+        <a href="#">DASHBOARD</a>
+        <a href="#">INVENTARIO</a>
+        <a href="#">PRÉSTAMOS</a>
+        <a href="#">CLIENTES</a>
+        <a href="#">HISTORIAL</a>
+        <a href="#">CONFIGURACIÓN</a>
+      </nav>
+
+     
+      <div class="nav-socrates">
+        <img src="img/socra.png" alt="Sócrates">
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main">
+      <header class="header">
+        <div class="header-left">
+        
+          <a href="index.html" class="back-button">
+            <img src="img/atras.png" alt="Volver al inicio" class="back-icon">
+          </a>
+
+          <h1>
+            <img src="img/libro-abierto.png" alt="Icono libro abierto" class="logo-img">
+            Agregar Libro
+          </h1>
+        </div>
+        <div class="admin">
+          <img src="img/bell.png" alt="Notificaciones" class="icono-notificacion" width="22">
+          <span>Administrador</span>
+          <img src="img/usuario.png" alt="Administrador" class="admin-icon" width="28">
+        </div>
+      </header>
+
+      <!-- Formulario -->
+      <form class="form">
+      
+        <div class="form-left">
+          <div class="form-group"><label>Título del libro</label><input type="text"></div>
+          <div class="form-group"><label>Autor</label><input type="text"></div>
+
+          <div class="form-group">
+            <label>Categoría</label>
+            <select>
+              <option>Seleccionar categoría</option>
+              <option>Romántico</option>
+              <option>Ciencia ficción</option>
+              <option>Fantasía</option>
+              <option>Misterio</option>
+              <option>Aventura</option>
+              <option>Humor</option>
+              <option>Terror</option>
+              <option>Comics/Manga</option>
+            </select>
+          </div>
+
+          <div class="form-group"><label>ISBN</label><input type="text"></div>
+          <div class="form-group"><label>Editorial</label><input type="text"></div>
+          <div class="form-group"><label>Año de publicación</label><input type="number"></div>
+          <div class="form-group full"><label>Descripción</label><textarea rows="4"></textarea></div>
+          <div class="form-group"><label>Cantidad total</label><input type="number"></div>
+
+          <div class="form-group">
+            <label>Estado</label>
+            <select>
+              <option>Seleccionar estado</option>
+              <option>Disponible</option>
+              <option>Prestado</option>
+              <option>Reservado</option>
+              <option>En reparación</option>
+              <option>Extraviado</option>
+              <option>Obsoleto</option>
+            </select>
+          </div>
+
+          <div class="form-group"><label>Ubicación</label><input type="text"></div>
+          <div class="form-group"><label>Código interno (opcional)</label><input type="text"></div>
+        </div>
+
+      
+        <div class="form-right">
+          <h3>Portada</h3>
+          <div class="upload">
+            <p>Subir imagen</p>
+            <button type="button">+</button>
+          </div>
+        </div>
+      </form>
+
+      
+      <div class="buttons-section">
+        <div class="line"></div> 
+        <div class="buttons">
+          <button class="cancel">Cancelar</button>
+          <button class="save">Guardar Libro</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

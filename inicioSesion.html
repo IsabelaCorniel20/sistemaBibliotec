@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="icon" href="img/Socrates logo.png">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/inicioSesion.js"></script>
+</head>
+
+<body>
+
+    <div id="panelLateral"> 
+        <!--Puse arriba el panel por que a la hora de ejecutar
+         sale mal si lo dejaba en su posición original-->
+        <aside>
+            <div id="logo">
+                <img src="img/Socrates logo.png" alt="logo" title="Logo">
+                <h2>Socrates <br> Biblioteca</h2>
+            </div>
+
+            <nav>
+                <img src="img/foto-nav.png" alt="Frase de Socrates" id="Socrates">
+            </nav>
+        </aside>
+    </div>
+    <main>
+        <!-- Cuadro de sesión -->
+
+        <div id="contenedor">
+            <form action="index.html" onsubmit= "return verificar()">
+                <h3>Iniciar Sesión</h3> <br>
+
+                <div class="informacion">
+                    <label for="correo">Correo Electrónico</label> <br>
+                    <input type="email" id="correo"> <br>
+
+                    <label for="paswd">Contraseña</label> <br>
+                    <input type="password" id="paswd"><br>
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div>
+                <div class="boton">
+                    <button>Iniciar sesión</button> <br>
+                    <!-- En un futuro se trabajara en el botón para crear cuenta -->
+                    <button>Crear una cuenta</button> 
+                </div>
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>

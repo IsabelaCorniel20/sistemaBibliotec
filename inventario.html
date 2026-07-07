@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Socrates-Inventario</title>
+    <link rel="icon" href="img/Socrates logo.png">
+    <link rel="stylesheet" href="img/Socrates logo.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <div id="panelLateral">
+        <aside>
+            <div id="logo">
+                <img src="img/Socrates logo.png" alt="logo" title="Logo">
+                <h2>Socrates <br> Biblioteca</h2>
+            </div>
+
+            <nav id="enlacesLateral">
+                <ul>
+                    <li> <a href="index.html">DASHBOARD</a></li>
+                    <li> <a href="inventario.html" class="activo">INVENTARIO</a></li>
+                    <li> <a href="prestamos.html">PRESTAMOS</a></li>
+                    <li> <a href="clientes.html">CLIENTES</a></li>
+                    <li> <a href="historial.html">HISTORIAL</a></li>
+                    <li> <a href="perfil.html">CONFIGURACIÓN</a></li>
+                </ul>
+
+                <img src="img/foto-nav.png" alt="Frase de Socrates" id="Socrates">
+            </nav>
+        </aside>
+    </div>
+
+    <header>
+        <div class="saludo">
+            <h1>Inventario de libros</h1>
+            <h3>Gestiona todos los libros disponibles de la biblioteca</h3>
+        </div>
+
+        <div class="perfil">
+            <i class="fa-solid fa-bell" class="icono"></i>
+            <div class="perfilUsuario">
+                <a href="perfil.html">
+                    <img src="img/avatar.png" alt="" class="icono"> <!--Icono de usuario-->
+                </a>
+                <p>Administrador</p>
+                <i class="fa-solid fa-angle-down" class="icono"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido -->
+    <div id="contenedor">
+        <div id="busqueda_arriba">
+            <!-- Búsqueda -->
+            <input type="search" placeholder="Búsqueda">
+            <!-- categorías -->
+            <div class="categoria">
+                <select name="Categoria" id="categoria">
+                    <option value="">- Categoría -</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Comedia">Comedia</option>
+                </select>
+            </div>
+            <!-- estados -->
+            <div class="Estado">
+                <select name="Estado" id="estado">
+                    <option value="">- Estado -</option>
+                    <option value="Atrasado">Atrasado</option>
+                    <option value="Disponible">Disponible</option>
+                    <option value="Prestado">prestado</option>
+                    <option value="Perdido">Perdido</option>
+                    <option value="Dañado">Dañado</option>
+                </select>
+            </div>
+            <!-- botón agregar -->
+            <div class="agregar">
+                <a href="Agregar_libro.html">
+                    <button>Agregar Libros</button>
+                </a>
+            </div>
+        </div>
+        <div class="Info_superio">
+            <div class="cuadrosCrema">
+                <!-- Hay que ponerle etiqueta id para hacer cambios a toda las secciones de aquí que javascript envié la información-->
+                <h3>254</h3>
+                <p>Total de Libros</p>
+            </div>
+
+            <div class="cuadrosCrema">
+                <h3>132</h3>
+                <p>Disponibles</p>
+            </div>
+
+            <div class="cuadrosCrema">
+                <h3>122</h3>
+                <p>Prestados</p>
+            </div>
+
+            <div class="cuadrosCrema">
+                <h3>18</h3>
+                <p>Atrasados</p>
+            </div>
+
+            <div class="cuadrosCrema">
+                <h3>20</h3>
+                <p>Perdidos/Dañados</p>
+            </div>
+
+        </div>
+        <div id="inventarioInicial">
+            <!-- titulo -->
+            
+            <!-- Tabla de Inventario -->
+            <div class="inventarioTabla">
+                <table border="1">
+                    <caption class="titulo">Inventario de libros</caption>
+                    <thead>
+                        <tr>
+                            <th>Portada</th>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Categoría</th>
+                            <th>Estado</th>
+                            <th>Disponibilidad</th>
+                            <th>ISBN</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="informacionLibro.html"><figure><img src="img/aDosMetrosDeTi.jpg" alt="portada"></figure></a>
+                            </td>
+                            <td>A dos metros de ti</td>
+                            <td>Ariana Godoy</td>
+                            <td>Romance/Ficción</td>
+                            <td class="disponible">Disponible</td>
+                            <td>3/5</td>
+                            <td>985-543-422-2</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <figure><img src="img/hamlet.webp" alt="portada"></figure>
+                            </td>
+                            <td>Hamlet</td>
+                            <td>William Shakespeare</td>
+                            <td>Tragedia/Romance</td>
+                            <td class="prestado">Prestado</td>
+                            <td>0/2</td>
+                            <td>985-456-342-2</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <figure><img src="img/coraline.jpeg" alt="portada"></figure>
+                            </td>
+                            <td>Coraline</td>
+                            <td>Neil Gaiman</td>
+                            <td>Terror/Fantasia</td>
+                            <td class="perdido">Perdido</td>
+                            <td>0/1</td>
+                            <td>985-476-365-3</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <figure><img src="img/blancaNieves.jpg" alt="portada"></figure>
+                            </td>
+                            <td>Blanca Nieves</td>
+                            <td>Los Grim</td>
+                            <td>Fantasia/infantil</td>
+                            <td class="danado">Dañado</td>
+                            <td>0/4</td>
+                            <td>976-544-234-1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+
+</body>
+
+</html>
